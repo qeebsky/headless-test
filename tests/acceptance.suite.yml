@@ -4,9 +4,30 @@
 # Perform tests in browser using the WebDriver or PhpBrowser.
 # If you need both WebDriver and PHPBrowser tests - create a separate suite.
 
+#actor: AcceptanceTester
+#modules:
+#    enabled:
+#        - PhpBrowser:
+#            url: http://localhost/myapp
+#        - \Helper\Acceptance
+
 actor: AcceptanceTester
 modules:
     enabled:
-        - PhpBrowser:
-            url: http://localhost/myapp
-        - \Helper\Acceptance
+        - WebDriver:
+#        - AcceptanceHelper
+#        - Asserts
+    config:
+        WebDriver:
+            url: 'https://www.google.com/'
+            window_size: false
+            port: 9515
+            path: /
+            browser: chrome
+            capabilities:
+                chromeOptions:
+                    args: ["--headless", "--disable-gpu"]
+#            browser: firefox
+#            capabilities:
+#                moz:firefoxOptions:
+#                    args: ["-headless"]
