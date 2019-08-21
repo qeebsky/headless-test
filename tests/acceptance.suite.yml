@@ -24,10 +24,9 @@ modules:
             port: 9515
             path: /
             browser: chrome
+#            browser: firefox
             capabilities:
                 chromeOptions:
                     args: ["--headless", "--disable-gpu"]
-#            browser: firefox
-#            capabilities:
-#                moz:firefoxOptions:
-#                    args: ["-headless"]
+                moz:firefoxOptions:
+                    args: ["-headless"]
