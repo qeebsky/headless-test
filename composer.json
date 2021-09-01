@@ -3,6 +3,6 @@
         "facebook/webdriver": "^1.6"
     },
     "require-dev": {
-        "codeception/codeception": "^2.5"
+        "codeception/codeception": "^3.1"
     }
 }
